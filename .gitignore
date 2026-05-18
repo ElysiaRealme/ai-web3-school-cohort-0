@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+secrets/
+.secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+node_modules/
+.DS_Store
+Thumbs.db
+
