@@ -1,15 +1,14 @@
 # Experiments
 
-Small public-safe experiments for AI x Web3 learning.
+这里存放 AI x Web3 学习中的公开安全小实验。
 
-Examples:
+示例：
 
-- Prompt and context experiments.
-- RAG note prototypes.
-- Agent workflow sketches.
-- Wallet permission models.
-- Contract interaction dry runs.
-- Verification and audit log demos.
+- Prompt 和 Context 实验。
+- RAG 笔记原型。
+- Agent workflow 草图。
+- 钱包权限模型。
+- 合约交互 dry run。
+- 验证和审计日志 demo。
 
-Each experiment should include purpose, setup, result, limitations, and public-safe evidence.
-
+每个 experiment 应包含目的、设置、结果、限制和可公开证据。

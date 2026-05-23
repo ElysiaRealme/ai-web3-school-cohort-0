@@ -1,33 +1,33 @@
-# Week 1 00X Learning Route
+# Week 1 00X 学习路线
 
-Updated: 2026-05-23
+更新日期：2026-05-23
 
-## Sources
+## 来源
 
-- User-provided Notion URL: https://ethpanda.notion.site/Week-1-AI-Web3-354bbd63be878198afc4f155b5c3a69f
-- Notion local read attempts:
-  - Direct lightweight HTTP against the `ethpanda.notion.site` URL returned a shell page and was not enough.
-  - `www.notion.so` URL variants returned the page payload.
-  - Notion `loadPageChunk` / browser network calls returned page data.
-  - Playwright browser access succeeded and confirmed the page title: `Week 1｜共学营：AI 与 Web3 基础知识`.
-- This route is based on the Notion page text extracted through local browser access, plus WCB task status and Handbook context.
-- WCB program read-only snapshot.
-- WCB Week 1 task list provided by the learner.
-- Handbook: https://aiweb3.school/zh/handbook/
-- WCB Learning: https://web3career.build/zh/programs/AI-Web3-School#tab=learning
+- 学员提供的 Notion URL：https://ethpanda.notion.site/Week-1-AI-Web3-354bbd63be878198afc4f155b5c3a69f
+- Notion 本地读取尝试：
+  - 直接轻量 HTTP 访问 `ethpanda.notion.site` URL 只能拿到网页壳，不足以用于规划。
+  - `www.notion.so` URL 变体返回了页面 payload。
+  - Notion `loadPageChunk` / 浏览器网络请求返回了页面数据。
+  - Playwright 浏览器访问成功，并确认页面标题为：`Week 1｜共学营：AI 与 Web3 基础知识`。
+- 本路线基于本地浏览器抽取到的 Notion 正文、WCB 任务状态和 Handbook 上下文。
+- WCB 课程只读快照。
+- 学员提供的 WCB Week 1 任务列表。
+- Handbook：https://aiweb3.school/zh/handbook/
+- WCB Learning：https://web3career.build/zh/programs/AI-Web3-School#tab=learning
 
-## Route Policy
+## 路线原则
 
-Week 1 has two tracks:
+Week 1 分为两条线：
 
-1. **Main 00X learning route**: concept learning, practice tasks, experiments, proof pack, and Hackathon preparation.
-2. **WCB operations route**: event attendance, screenshots, replay notes, and WCB task submission.
+1. **主线 00X 学习路线**：概念学习、实践任务、实验、Proof Pack 和 Hackathon 准备。
+2. **WCB 操作路线**：活动参与、截图、回放笔记和 WCB 任务提交。
 
-WCB proof is required, but it should not occupy a main course number unless the learning objective is specifically about proof packaging.
+WCB proof 很重要，但不应占用主线课程编号，除非该模块本身的学习目标就是 proof 打包。
 
-## Coverage Map
+## 覆盖范围
 
-The route below explicitly covers these Week 1 WCB tasks:
+本路线明确覆盖以下 Week 1 WCB 任务：
 
 - AI 向任务：整理 AI 基础概念卡片
 - AI 向任务：完成 Learning Agent Setup
@@ -43,136 +43,136 @@ The route below explicitly covers these Week 1 WCB tasks:
 - 行业观察进阶：拆解 1-2 个 AI x Web3 项目或个人
 - 前置准备：建立 AI x Web3 行业信息流关注清单
 
-## Main 00X Route
+## 主线 00X 路线
 
 ### 001｜账户、地址、私钥、助记词：Web3 身份的最小模型
 
-Status: completed.
+状态：已完成。
 
-Output:
+产出：
 
-- Address / private key / seed phrase / wallet note.
-- Agent wallet private key boundary.
+- 地址 / 私钥 / 助记词 / 钱包笔记。
+- Agent 钱包私钥边界说明。
 
-Proof:
+Proof：
 
 - `daily/2026-05-18.md`
 - Commit `2bf6799`
 
 ### 002｜签名、授权、交易：不要把“签一下”理解成普通登录
 
-Status: completed.
+状态：已完成。
 
-Output:
+产出：
 
-- Signature / approval / transaction comparison.
-- Human confirmation boundary.
+- Signature / Approval / Transaction 对比。
+- 人工确认边界。
 
-Proof:
+Proof：
 
 - `daily/2026-05-20.md`
 - Commit `39f4f91`
 
 ### 003｜Gas、网络、测试网、区块浏览器：链上执行如何被验证
 
-Status: completed.
+状态：已完成。
 
-Output:
+产出：
 
-- Gas / network / testnet / explorer note.
-- On-chain verification workflow.
+- Gas / Network / Testnet / Explorer 笔记。
+- 链上验证 workflow。
 
-Proof:
+Proof：
 
 - `daily/2026-05-21.md`
 - Commit `444ed4f`
 
 ### 004｜AI Agent 到 Web3 的最小安全工作流
 
-Status: completed by consolidation.
+状态：已通过综合复盘完成。
 
-Output:
+产出：
 
-- Consolidated security workflow.
-- `AI generation -> human review -> wallet confirmation -> on-chain execution -> explorer verification`.
+- 综合安全 workflow。
+- `AI 生成 -> 人工复核 -> 钱包确认 -> 链上执行 -> 区块浏览器验证`。
 
-Proof:
+Proof：
 
 - `daily/2026-05-22.md`
 - Commit `44a4a7e`
 
 ### 005｜LLM、Prompt、Context：AI 工具实践的最小认知模型
 
-Status: skipped / accepted as prior knowledge.
+状态：已跳过，视为已有基础。
 
-Reason:
+原因：
 
-- Learner is AI based and already treats LLM / prompt / context as basic knowledge.
-- Do not spend main learning time on this section.
+- 学员是 AI Based，已将 LLM / Prompt / Context 视为基础常识。
+- 主线学习时间不再消耗在该基础小节上。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - AI 向任务：整理 AI 基础概念卡片
 
-Goal:
+目标：
 
-- Understand what LLMs are good at and where they fail.
-- Understand prompt as task instruction.
-- Understand context as the model's visible working material.
-- Explain why AI-generated facts, links, code, and Web3 actions must be verified.
+- 理解 LLM 擅长什么、不擅长什么。
+- 理解 Prompt 是任务指令。
+- 理解 Context 是模型当前可见的工作材料。
+- 能解释为什么 AI 生成的事实、链接、代码和 Web3 操作都必须验证。
 
-Output:
+产出：
 
-- AI concept note: LLM / Prompt / Context.
-- Verification checklist for AI-generated links, facts, code, and WCB proof.
-- First draft for AI concept cards.
+- AI 概念笔记：LLM / Prompt / Context。
+- AI 生成链接、事实、代码和 WCB proof 的验证清单。
+- AI 概念卡片初稿。
 
 ### 006｜Workflow、Agent、Tool Use：从回答问题到执行流程
 
-Status: completed.
+状态：已完成。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - AI 向任务：整理 AI 基础概念卡片
 - AI Agent 入门：Hermes 从 0 到 1
 
-Goal:
+目标：
 
-- Distinguish prompt, workflow, and agent.
-- Understand tool calling, state, memory, tracing, guardrails, handoff, and error recovery at a beginner level.
-- Explain when not to use an agent.
+- 区分 Prompt、Workflow 和 Agent。
+- 理解 Tool Calling、状态、记忆、Tracing、Guardrails、Handoff 和错误恢复。
+- 说明什么时候不应该使用 Agent。
 
-Output:
+产出：
 
-- Prompt / Workflow / Agent comparison table.
-- Agent execution risk checklist.
+- Prompt / Workflow / Agent 对比表。
+- Agent 执行风险清单。
 
-Proof:
+Proof：
 
 - `daily/2026-05-23.md`
 
 ### 007｜Learning Agent Setup：学习代理与 GitHub 工作区
 
-Status: completed.
+状态：已完成。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - AI 向任务：完成 Learning Agent Setup
 
-Goal:
+目标：
 
-- Document the Learning Agent setup.
-- Explain how Codex / Hermes / Claude Code is used in the learning workflow.
-- Connect WCB task reading, Handbook reading, daily notes, GitHub commits, and proof links.
+- 记录 Learning Agent 设置方式。
+- 说明 Codex / Hermes / Claude Code 如何用于学习 workflow。
+- 连接 WCB 任务读取、Handbook 阅读、每日笔记、GitHub commit 和 proof 链接。
 
-Output:
+产出：
 
-- Learning Agent setup note.
-- Repo link.
-- Agent-assisted learning log.
-- Commit / README proof.
+- Learning Agent setup 笔记。
+- Repo 链接。
+- Agent 协助学习日志。
+- Commit / README proof。
 
-Proof:
+Proof：
 
 - `tasks/learning-agent-setup-proof.md`
 - `wcb-agent-flow.md`
@@ -180,310 +180,315 @@ Proof:
 
 ### 008｜AI 基础概念卡片：从概念到可复习材料
 
-Status: next.
+状态：已完成。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - AI 向任务：整理 AI 基础概念卡片
 
-Goal:
+目标：
 
-- Turn AI basics into concise cards.
-- Cover LLM, Prompt, Context, RAG, Agent, Workflow, Tool Use, AI Coding, Evaluation.
+- 将 AI 基础整理成简明概念卡片。
+- 覆盖 LLM、Prompt、Context、RAG、Agent、Workflow、Tool Use、AI Coding、Evaluation。
 
-Output:
+产出：
 
-- `experiments/ai-concept-cards.md` or equivalent.
-- Each card should include definition, why it matters, common mistake, and one AI x Web3 connection.
+- `experiments/ai-concept-cards.md` 或等价文件。
+- 每张卡片包含：定义、为什么重要、常见误区、一个 AI x Web3 连接点。
+
+Proof：
+
+- `experiments/ai-concept-cards.md`
+- `daily/2026-05-23.md`
 
 ### 009｜Web3 基础概念卡片：账户到合约执行链
 
-Status: pending.
+状态：下一节。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - Web3 向任务：整理 Web3 基础概念卡片
 
-Goal:
+目标：
 
-- Turn Web3 basics into concise cards.
-- Cover account, wallet, address, private key, seed phrase, signature, approval, transaction, gas, network, testnet, block explorer, smart contract.
+- 将 Web3 基础整理成简明概念卡片。
+- 覆盖 Account、Wallet、Address、Private Key、Seed Phrase、Signature、Approval、Transaction、Gas、Network、Testnet、Block Explorer、Smart Contract。
 
-Output:
+产出：
 
-- `experiments/web3-concept-cards.md` or equivalent.
+- `experiments/web3-concept-cards.md` 或等价文件。
 
 ### 010｜智能合约：链上规则如何被部署、读取和写入
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - Web3 向任务：部署或调用一个最小智能合约
 
-Goal:
+目标：
 
-- Understand smart contract as public on-chain rule / state.
-- Distinguish read call and write transaction.
-- Understand why contract writes require wallet confirmation and gas.
+- 理解智能合约是公开链上规则和状态。
+- 区分只读 call 和写入 transaction。
+- 理解合约写入为什么需要钱包确认和 Gas。
 
-Output:
+产出：
 
-- Minimal smart contract concept note.
-- Remix / Hardhat / Foundry practice plan.
+- 最小智能合约概念笔记。
+- Remix / Hardhat / Foundry 实践计划。
 
 ### 011｜测试网实践：完成一笔测试网交易
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - Web3 向任务：完成一笔测试网交易
 
-Goal:
+目标：
 
-- Use a safe test wallet.
-- Switch to a testnet.
-- Claim test token if needed.
-- Send one test transaction.
-- Record transaction hash, status, gas, block height, and explorer link.
+- 使用安全测试钱包。
+- 切换到测试网。
+- 如有需要，领取测试币。
+- 发送一笔测试交易。
+- 记录交易哈希、状态、Gas、区块高度和区块浏览器链接。
 
-Output:
+产出：
 
-- Testnet transaction practice note.
-- Public-safe proof without seed phrase or private key.
+- 测试网交易实践笔记。
+- 不包含助记词或私钥的公开安全 proof。
 
 ### 012｜最小合约交互：一次读取、一次写入、一次验证
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - Web3 向任务：部署或调用一个最小智能合约
 
-Goal:
+目标：
 
-- Deploy or call a minimal contract.
-- Complete one read and one write.
-- Record contract address, transaction hash, and explorer link.
+- 部署或调用一个最小合约。
+- 完成一次读取和一次写入。
+- 记录合约地址、交易哈希和区块浏览器链接。
 
-Output:
+产出：
 
-- Contract interaction note.
-- Read / write result and verification material.
+- 合约交互笔记。
+- 读 / 写结果和验证材料。
 
 ### 013｜EOA、智能账户、多签：权限模型对比
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - Web3 向进阶：比较 EOA、智能账户、多签的权限差异
 
-Goal:
+目标：
 
-- Compare EOA, smart account, multisig, Safe, ERC-4337, session key, and permission limits.
-- Explain why account abstraction matters for AI x Web3.
+- 比较 EOA、智能账户、多签、Safe、ERC-4337、Session Key 和权限限额。
+- 说明账户抽象为什么对 AI x Web3 重要。
 
-Output:
+产出：
 
-- Permission model comparison table.
-- Agent wallet design implications.
+- 权限模型对比表。
+- Agent Wallet 设计启发。
 
 ### 014｜AI x Web3 最小交叉流程图
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - AI x Web3 综合任务：画出 AI x Web3 最小交叉流程图
 
-Goal:
+目标：
 
-- Draw or describe `AI output -> human review -> wallet confirmation -> on-chain execution -> block explorer verification`.
-- Mark logs, failure points, rollback strategy, and human confirmation nodes.
+- 绘制或描述 `AI 输出 -> 人工复核 -> 钱包确认 -> 链上执行 -> 区块浏览器验证`。
+- 标出日志、失败点、回滚策略和人工确认节点。
 
-Output:
+产出：
 
-- Flowchart or Mermaid diagram.
-- Risk boundary note.
+- 流程图或 Mermaid 图。
+- 风险边界说明。
 
 ### 015｜受限 Web3 助手或小 workflow 设计
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - 综合进阶：设计一个受限 Web3 助手或小 workflow
 
-Goal:
+目标：
 
-- Design a constrained assistant that can explain, prepare, or verify Web3 actions.
-- Clearly state what it cannot do automatically.
+- 设计一个只能解释、准备或验证 Web3 操作的受限助手。
+- 明确它不能自动做什么。
 
-Output:
+产出：
 
-- Small workflow spec.
-- Allowed actions / forbidden actions / human confirmation points.
+- 小型 workflow 规格说明。
+- 允许动作 / 禁止动作 / 人工确认点。
 
 ### 016｜AI 可交互学习产物：页面、CLI、流程图、Quiz 或概念卡片
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - AI 向任务：完成 AI 可交互学习产物
 
-Goal:
+目标：
 
-- Pick one Week 1 concept and build an interactive artifact.
-- Explain what AI generated, what the learner changed manually, what was unreliable, and next improvement.
+- 选择一个 Week 1 概念并构建可交互学习产物。
+- 说明哪些内容由 AI 生成、哪些由学员人工修改、哪些输出不可靠、下一步如何改进。
 
-Output:
+产出：
 
-- Artifact under `experiments/` or `demos/`.
-- README or daily note explaining the process.
+- `experiments/` 或 `demos/` 下的学习产物。
+- README 或 daily note 记录过程。
 
 ### 017｜行业信息流关注清单
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - 前置准备：建立 AI x Web3 行业信息流关注清单
 
-Goal:
+目标：
 
-- Build a follow list for AI x Web3 / Ethereum / Crypto AI.
-- Include people, projects, research groups, newsletters, X accounts, repos, and communities.
+- 建立 AI x Web3 / Ethereum / Crypto AI 关注清单。
+- 包含人物、项目、研究组织、newsletter、X 账号、repo 和社区。
 
-Output:
+产出：
 
-- `tasks/industry-follow-list.md` or equivalent.
+- `tasks/industry-follow-list.md` 或等价文件。
 
 ### 018｜拆解 1-2 个 AI x Web3 项目或个人
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - 行业观察进阶：拆解 1-2 个 AI x Web3 项目或个人
 
-Goal:
+目标：
 
-- Pick 1-2 projects or people from the follow list.
-- Summarize positioning, users, tech stack, representative views, and possible AI x Web3 intersections.
+- 从关注清单中选择 1-2 个项目或个人。
+- 总结定位、用户、技术栈、代表观点和可能的 AI x Web3 结合点。
 
-Output:
+产出：
 
-- `tasks/industry-observation.md` or equivalent.
+- `tasks/industry-observation.md` 或等价文件。
 
 ### 019｜Week 1 Proof-of-Work Pack
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - AI x Web3 综合任务：提交 Week 1 Proof-of-Work Pack
 
-Goal:
+目标：
 
-- Package Week 1 proof into one submission-ready record.
-- Include repo link, commit links, daily notes, task proof, screenshots or public links, testnet proof, contract proof, and learning agent notes.
+- 将 Week 1 proof 打包成可提交记录。
+- 包含 repo 链接、commit 链接、daily notes、任务 proof、截图或公开链接、测试网 proof、合约 proof 和 Learning Agent 笔记。
 
-Output:
+产出：
 
 - `submissions/week1-proof-of-work-pack.md`
 
 ### 020｜发布 AI x Web3 学习总结
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
 - 发布 AI x Web3 学习总结
 
-Goal:
+目标：
 
-- Publish a concise Week 1 learning summary.
-- Include what was learned, what was built, what remains unclear, and next week direction.
+- 发布一份简短 Week 1 学习总结。
+- 包含学到什么、构建了什么、仍然不清楚什么、下周方向。
 
-Output:
+产出：
 
 - `submissions/week1-learning-summary.md`
-- Optional public post draft.
+- 可选公开帖子草稿。
 
 ### 021｜Hackathon Idea Seed：把 Week 1 知识收束成项目方向
 
-Status: pending.
+状态：待进行。
 
-WCB task coverage:
+WCB 任务覆盖：
 
-- Hackathon preparation.
+- Hackathon 准备。
 
-Goal:
+目标：
 
-- Produce at least one Hackathon idea.
-- Include problem, target user, AI component, Web3 component, permission risk, human confirmation point, verification material, and smallest demo.
+- 产出至少一个 Hackathon idea。
+- 包含问题、目标用户、AI 组件、Web3 组件、权限风险、人工确认点、验证材料和最小 demo。
 
-Output:
+产出：
 
-- One idea seed under `hackathon/`.
+- `hackathon/` 下的一个 idea seed。
 
-## WCB Operations Route
+## WCB 操作路线
 
-These are not main course modules. Handle them as daily proof tasks.
+这些不是主线课程模块，而是每日 proof 任务。
 
 ### O-001｜实时活动 proof
 
-Use when a live event task is available.
+适用场景：有 live 活动任务时使用。
 
-Output:
+产出：
 
-- Screenshot uploaded manually to WCB.
-- One key takeaway, question, or next action.
+- 手动上传到 WCB 的截图。
+- 一个关键收获、问题或下一步行动。
 
 ### O-002｜回放任务 proof
 
-Use only when the live task was missed or when extra notes are useful.
+适用场景：错过 live 任务，或需要额外笔记时使用。
 
-Output:
+产出：
 
-- Replay screenshot or public replay link.
-- At least three valid notes.
+- 回放截图或公开回放链接。
+- 至少三条有效笔记。
 
 ### O-003｜学习仓库 proof
 
-Use when WCB asks for course repo proof.
+适用场景：WCB 要求课程 repo proof 时使用。
 
-Output:
+产出：
 
-- Repo link.
-- Commit link.
-- README screenshot or commit history.
-- Learning agent configuration note.
-- Agent-assisted learning log.
+- Repo 链接。
+- Commit 链接。
+- README 截图或 commit history。
+- Learning Agent 配置说明。
+- Agent 协助学习日志。
 
-## Week 1 Event / Task Snapshot
+## Week 1 活动 / 任务快照
 
-Approved / submitted live tasks found in WCB snapshot:
+WCB 快照中已通过或已提交的 live 任务：
 
-- 5.18 Co-learning: approved.
-- 5.18 AI 时代的 Web3 架构能力: approved.
-- 5.19 AI Agent 入门：Hermes 从 0 到 1: approved.
-- 5.20 Web3 运行原理: approved.
-- 5.20 Co-learning: approved.
-- 5.21 AI 下乡计划：AI 在 Web3 的应用: approved.
-- 5.22 Week 1 例会: approved.
-- 5.22 上麦分享学习感受或信息观察: approved.
-- 5.23 Open Agentic Economy: submitted.
+- 5.18 Co-learning：已通过。
+- 5.18 AI 时代的 Web3 架构能力：已通过。
+- 5.19 AI Agent 入门：Hermes 从 0 到 1：已通过。
+- 5.20 Web3 运行原理：已通过。
+- 5.20 Co-learning：已通过。
+- 5.21 AI 下乡计划：AI 在 Web3 的应用：已通过。
+- 5.22 Week 1 例会：已通过。
+- 5.22 上麦分享学习感受或信息观察：已通过。
+- 5.23 Open Agentic Economy：已提交。
 
-Replay tasks are generally optional when the corresponding live task is approved, unless the learner wants extra notes.
+对应 live 任务已通过时，回放任务通常是可选补充，除非学员想补充额外笔记。
 
-## Next Action
+## 下一步
 
-Proceed with:
+继续推进：
 
 ```text
-005｜LLM、Prompt、Context：AI 工具实践的最小认知模型
+008｜AI 基础概念卡片：从概念到可复习材料
 ```

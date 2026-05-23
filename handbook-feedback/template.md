@@ -1,35 +1,34 @@
-# Handbook Feedback: <Topic>
+# Handbook Feedback：<主题>
 
-Date:
+日期：
 
-## Page
+## 页面
 
-- URL:
-- Section:
+- URL：
+- 章节：
 
-## Problem Type
+## 问题类型
 
-- [ ] Unclear concept
-- [ ] Outdated link or resource
-- [ ] Typo
-- [ ] Missing example
-- [ ] Structure issue
-- [ ] Translation issue
-- [ ] Technical inaccuracy
+- [ ] 概念不清
+- [ ] 链接或资料过期
+- [ ] 错别字
+- [ ] 缺少例子
+- [ ] 结构问题
+- [ ] 翻译问题
+- [ ] 技术不准确
 
-## Observation
+## 观察
 
-What was confusing, inaccurate, or hard to use?
+哪里让人困惑、不准确或不方便使用？
 
-## Suggested Change
+## 建议改法
 
-What should be changed or added?
+应该修改或补充什么？
 
-## Source
+## 来源
 
-Daily note, task, experiment, or discussion link:
+每日笔记、任务、实验或讨论链接：
 
-## Public Safety Check
+## 公开安全检查
 
-- [ ] No private keys, API keys, personal data, or unreleased links included.
-
+- [ ] 不包含私钥、API key、个人数据或未公开链接。

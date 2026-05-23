@@ -1,18 +1,17 @@
-# Task: <Title>
+# 任务：<标题>
 
-Date:
+日期：
 
-## Requirement
+## 要求
 
-## Plan
+## 计划
 
-## Work Log
+## 工作记录
 
-## Evidence
+## 证据
 
-## Submission Draft
+## 提交草稿
 
-## Review Notes
+## 复盘笔记
 
-## Follow-ups
-
+## 后续事项

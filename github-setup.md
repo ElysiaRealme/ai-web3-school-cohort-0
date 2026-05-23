@@ -1,51 +1,51 @@
-# GitHub Learning Repo Setup
+# GitHub 学习仓库设置
 
-Local repo path:
+本地 repo 路径：
 
 ```text
 D:\WORKSPACE\AIxWeb3School\Note\ai-web3-school-cohort-0
 ```
 
-Recommended GitHub repo:
+建议 GitHub repo 名称：
 
 ```text
 ai-web3-school-cohort-0
 ```
 
-Recommended visibility: public.
+建议可见性：public。
 
-Description:
+描述：
 
 ```text
 Personal learning journal and proof-of-work for AI x Web3 School.
 ```
 
-## Manual Confirmation Needed
+## 需要手动确认的内容
 
-Before creating the public GitHub repo, confirm:
+创建公开 GitHub repo 前，确认：
 
-- Repo name.
-- Public or private visibility.
-- Whether this local path should be pushed as the remote repo.
+- Repo 名称。
+- Public 或 private 可见性。
+- 是否将当前本地路径 push 到该 remote repo。
 
-## GitHub CLI Flow
+## GitHub CLI 流程
 
-Install GitHub CLI from https://cli.github.com/ if `gh` is unavailable.
+如果 `gh` 不可用，从 https://cli.github.com/ 安装 GitHub CLI。
 
-Then run:
+然后运行：
 
 ```powershell
 gh auth login
 gh auth status
 ```
 
-After confirmation, create the remote from this local repo:
+确认后，从当前本地 repo 创建 remote：
 
 ```powershell
 gh repo create ai-web3-school-cohort-0 --public --description "Personal learning journal and proof-of-work for AI x Web3 School" --source . --remote origin --push
 ```
 
-## Normal Commit Flow
+## 常规 commit 流程
 
 ```powershell
 git status --short
@@ -53,4 +53,3 @@ git add .
 git commit -m "Initialize AI Web3 School learning journal"
 git push
 ```
-

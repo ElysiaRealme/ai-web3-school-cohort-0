@@ -1,16 +1,15 @@
 # Hackathon
 
-Use this folder to collect project ideas and reduce them into buildable demos.
+此目录用于收集项目想法，并逐步收束成可以构建的 demo。
 
-Recommended project note sections:
+建议项目笔记包含：
 
-- Problem.
-- User.
-- AI component.
-- Web3 component.
-- Permission and asset risk.
-- Human confirmation points.
-- Demo scope.
-- Evidence and verification.
-- Handbook chapters connected.
-
+- 问题。
+- 用户。
+- AI 组件。
+- Web3 组件。
+- 权限和资产风险。
+- 人工确认点。
+- Demo 范围。
+- 证据和验证方式。
+- 关联的 Handbook 章节。

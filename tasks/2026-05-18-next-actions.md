@@ -1,61 +1,60 @@
-# 2026-05-18 Next Actions
+# 2026-05-18 下一步行动
 
-Profile confirmed:
+已确认画像：
 
-- AI foundation: basic.
-- Web3 foundation: beginner.
-- Programming ability: independent developer.
-- Target direction: Hackathon project.
-- Daily time budget: 3 hours.
-- Output language: Chinese.
+- AI 基础：有基础。
+- Web3 基础：新手。
+- 编程能力：能独立开发。
+- 目标方向：Hackathon 项目。
+- 每日时间预算：3 小时。
+- 输出语言：中文。
 
-## Priority 1: Make The Learning Repo Public-Ready
+## 优先级 1：让学习 repo 达到可公开状态
 
-- Review all initialized files.
-- Keep `.env.example`, but do not create or commit a real `.env.local`.
-- Confirm repo name and visibility before creating the GitHub remote.
-- Suggested repo name: `ai-web3-school-cohort-0`.
+- 检查所有初始化文件。
+- 可以保留 `.env.example`，但不要创建或提交真实 `.env.local`。
+- 创建 GitHub remote 之前，确认 repo 名称和可见性。
+- 建议 repo 名称：`ai-web3-school-cohort-0`。
 
-## Priority 2: Submit Today's WCB Proof
+## 优先级 2：提交今日 WCB Proof
 
-Current WCB read-only status: 5.18 related task submissions are not submitted yet.
+当前 WCB 只读状态：5.18 相关任务尚未提交。
 
-Available options:
+可选项：
 
-- Real-time 5.18 Co-learning task: screenshot plus one key takeaway, question, or next action.
-- Real-time 5.18 AI Web3 architecture task: screenshot plus one key takeaway, question, or next action.
-- Replay 5.18 AI Web3 architecture task: replay screenshot or link plus at least three valid notes.
+- 5.18 Co-learning 实时任务：截图加一条关键收获、问题或下一步行动。
+- 5.18 AI Web3 架构实时任务：截图加一条关键收获、问题或下一步行动。
+- 5.18 AI Web3 架构回放任务：回放截图或链接，加至少三条有效笔记。
 
-Recommended proof text:
+推荐 proof 文案：
 
 ```text
-今天我完成了 AI x Web3 School Learning Agent 初始化，并把 Handbook 阅读、WCB 任务、daily note、submission draft 和 Handbook feedback 串成了一个可持续维护的 proof-of-work 流程。
+今天我完成了 AI x Web3 School Learning Agent 初始化，并把 Handbook 阅读、WCB 任务、每日笔记、提交草稿和 Handbook feedback 串成了一个可持续维护的 proof-of-work 流程。
 
 我的关键收获 / 下一步行动是：AI x Web3 项目不能只关注模型输出，还必须把钱包签名、权限边界、人工确认、链上执行和可验证记录放进同一个 workflow 里。接下来我会优先补齐 Web3 基础，并把每个学习任务沉淀成 Hackathon 可复用的 demo、流程图或风险清单。
 ```
 
-## Priority 3: Start The First Web3 Foundation Note
+## 优先级 3：开始第一条 Web3 基础笔记
 
-Create a note covering:
+创建一条笔记，覆盖：
 
-- Address.
-- Private key.
-- Seed phrase.
-- Signature.
-- Transaction.
-- Gas.
-- Why an AI Agent must not directly handle private keys or seed phrases.
+- 地址。
+- 私钥。
+- 助记词。
+- 签名。
+- 交易。
+- Gas。
+- 为什么 AI Agent 不能直接处理私钥或助记词。
 
-## Priority 4: Start One Hackathon Idea Seed
+## 优先级 4：开始一个 Hackathon Idea Seed
 
-Use this format:
+使用这个格式：
 
-- Problem:
-- Target user:
-- AI component:
-- Web3 component:
-- Permission / asset risk:
-- Human confirmation point:
-- Verification material:
-- Smallest demo:
-
+- 问题：
+- 目标用户：
+- AI 组件：
+- Web3 组件：
+- 权限 / 资产风险：
+- 人工确认点：
+- 验证材料：
+- 最小 demo：

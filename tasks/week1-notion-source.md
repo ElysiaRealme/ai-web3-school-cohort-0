@@ -1,104 +1,104 @@
-# Week 1 Notion Source Read Log
+# Week 1 Notion 来源读取记录
 
-Date: 2026-05-23
+日期：2026-05-23
 
-Source:
+来源：
 
 - https://ethpanda.notion.site/Week-1-AI-Web3-354bbd63be878198afc4f155b5c3a69f
 
-## Local Read Attempts
+## 本地读取尝试
 
-1. Direct HTTP to the `ethpanda.notion.site` URL loaded only a lightweight shell and was not enough for planning.
-2. `www.notion.so` URL variants returned a larger page payload.
-3. Notion page chunk APIs returned structured page data.
-4. Playwright browser access succeeded:
-   - Page URL: `https://ethpanda.notion.site/Week-1-AI-Web3-354bbd63be878198afc4f155b5c3a69f`
-   - Page title: `Week 1｜共学营：AI 与 Web3 基础知识`
-   - Extraction method: browser `document.body.innerText` after direct page load.
+1. 直接 HTTP 访问 `ethpanda.notion.site` URL 时，只加载到轻量网页壳，不足以用于路线规划。
+2. `www.notion.so` URL 变体返回了更完整的页面 payload。
+3. Notion page chunk API 返回了结构化页面数据。
+4. Playwright 浏览器访问成功：
+   - 页面 URL：`https://ethpanda.notion.site/Week-1-AI-Web3-354bbd63be878198afc4f155b5c3a69f`
+   - 页面标题：`Week 1｜共学营：AI 与 Web3 基础知识`
+   - 抽取方式：浏览器直接加载页面后读取 `document.body.innerText`。
 
-## Page Structure Extracted
+## 抽取到的页面结构
 
-The page is organized around Week 1 AI and Web3 foundations. The core learning goals are:
+该页面围绕 Week 1 的 AI 与 Web3 基础展开。核心学习目标是：
 
-- Build shared language for LLM, prompt, workflow, agent, tool use, AI coding, wallet, signature, transaction, gas, smart contract, testnet, and block explorer.
-- Complete one AI tool practice, one testnet or contract interaction, and one minimal AI x Web3 cross-over experiment.
-- Develop safety awareness around permissions, human confirmation, logs, proof material, and failure recovery.
+- 建立 LLM、Prompt、Workflow、Agent、Tool Use、AI Coding、钱包、签名、交易、Gas、智能合约、测试网和区块浏览器的共同语言。
+- 完成一次 AI 工具实践、一次测试网或合约交互，以及一个最小 AI x Web3 交叉实验。
+- 建立权限、安全、人工确认、日志、proof 材料和失败恢复意识。
 
-The suggested learning order is:
+建议学习顺序：
 
-1. Diagnose whether the learner is stronger in AI, Web3, or neither.
-2. Patch the weaker side first.
-3. Complete one AI practice and one Web3 practice.
-4. Connect AI output, human review, wallet confirmation, chain execution, and explorer verification into one workflow.
-5. Package concept notes and process records as proof.
+1. 判断学员更偏 AI、更偏 Web3，还是两边都刚入门。
+2. 优先补短板。
+3. 完成一个 AI 实践和一个 Web3 实践。
+4. 将 AI 输出、人工复核、钱包确认、链上执行和区块浏览器验证连接成一条 workflow。
+5. 打包概念笔记和过程记录作为 proof。
 
-## Modules
+## 模块
 
-### Module A: AI Basics
+### 模块 A：AI 基础
 
-Coverage:
+覆盖内容：
 
-- LLM working model.
-- Context window, system instructions, prompts, and tool calls.
-- LLM API basics: model, messages, temperature, max tokens.
-- Prompt vs workflow vs agent.
-- AI coding tools and their limits.
-- Verification risks: factual errors, fake or stale references, reasoning drift, over-execution, tool misuse.
-- Agent components: state, memory, MCP, skills, tool calling, tracing, guardrails, handoff, recovery.
+- LLM 工作模型。
+- Context window、系统指令、Prompt 和工具调用。
+- LLM API 基础：model、messages、temperature、max tokens。
+- Prompt、Workflow 与 Agent 的边界。
+- AI Coding 工具及其限制。
+- 验证风险：事实错误、错误或过期资料、推理漂移、越权执行、工具误用。
+- Agent 组件：状态、记忆、MCP、skills、tool calling、tracing、guardrails、handoff、错误恢复。
 
-Practice:
+实践：
 
-- Build a personal learning agent.
-- Create a GitHub repo as the learning workspace.
-- Use an agent to generate an interactive learning artifact.
+- 搭建个人 Learning Agent。
+- 创建 GitHub repo 作为学习工作区。
+- 用 Agent 生成可交互学习产物。
 
-### Module B: Web3 Basics
+### 模块 B：Web3 基础
 
-Coverage:
+覆盖内容：
 
-- Account, address, wallet, private key, and seed phrase.
-- Signature, approval, transaction, gas, L1/L2, testnet, block explorer, receipt.
-- Smart contracts as public execution and state.
-- Account abstraction, smart accounts, multisig, Safe, ERC-4337, OpenZeppelin.
-- AI-native account safety boundaries: no private key or seed phrase access, limited permissions, session keys, and human confirmation.
+- 账户、地址、钱包、私钥和助记词。
+- 签名、授权、交易、Gas、L1/L2、测试网、区块浏览器和交易回执。
+- 智能合约作为公开执行逻辑和公开状态。
+- 账户抽象、智能账户、多签、Safe、ERC-4337、OpenZeppelin。
+- AI-native account 的安全边界：不接触私钥或助记词，使用受限权限、session key 和人工确认。
 
-Practice:
+实践：
 
-- Create a test wallet.
-- Send a testnet transaction.
-- Record transaction hash, status, gas, block height, and explorer link.
-- Deploy or call a minimal smart contract.
-- Compare EOA, smart account, and multisig.
+- 创建测试钱包。
+- 发送一笔测试网交易。
+- 记录交易哈希、状态、Gas、区块高度和区块浏览器链接。
+- 部署或调用一个最小智能合约。
+- 比较 EOA、智能账户和多签。
 
-### Module C: Minimal AI x Web3 Cross Experiment
+### 模块 C：最小 AI x Web3 交叉实验
 
-Coverage:
+覆盖内容：
 
-- AI generates instructions or scripts.
-- Human reviews the output.
-- Wallet confirmation remains manual.
-- Chain execution is verified through explorer records.
+- AI 生成说明或脚本。
+- 人工复核输出。
+- 钱包确认保持手动。
+- 链上执行通过区块浏览器记录验证。
 
-Practice:
+实践：
 
-- Explain a transaction or ABI with AI and manually validate the explanation.
-- Draw the AI generation -> human review -> wallet confirmation -> chain execution -> explorer verification flow.
-- Package proof and boundaries.
+- 用 AI 解释交易或 ABI，并进行人工验证。
+- 画出“AI 生成 -> 人工复核 -> 钱包确认 -> 链上执行 -> 区块浏览器验证”流程。
+- 打包 proof 和边界说明。
 
-## Advanced / Optional Tracks
+## 进阶 / 可选轨道
 
-- Agent workflow and Ethereum-related skills.
-- Web3 engineering and chain execution.
-- AI adaptation, LoRA / PEFT, and controllability.
-- Blockchain protocol basics: consensus, EVM, gas, execution layer.
-- Minimal cross-over experiment upgrades with logs, failure points, rollback strategy, and human confirmation nodes.
-- Industry observation and follow-list building for AI x Web3 / Ethereum / Crypto AI.
+- Agent workflow 与 Ethereum 相关 skills。
+- Web3 工程化与链上执行。
+- AI 适配、LoRA / PEFT 与可控性。
+- 区块链协议基础：共识、EVM、Gas、执行层。
+- 最小交叉实验升级：日志、失败点、回滚策略和人工确认节点。
+- AI x Web3 / Ethereum / Crypto AI 的行业观察和关注清单。
 
-## Route Impact
+## 对路线的影响
 
-This source supports the current 00X route in `tasks/week1-00x-learning-route.md`, especially:
+该来源支撑当前 `tasks/week1-00x-learning-route.md` 中的 00X 路线，尤其是：
 
-- 005-008 for AI foundations and concept cards.
-- 009-013 for Web3 foundations, contract practice, testnet proof, and account model comparison.
-- 014-016 for AI x Web3 workflow, constrained assistant design, and interactive artifact.
-- 017-020 for industry observation, proof pack, and public learning summary.
+- 005-008：AI 基础与概念卡片。
+- 009-013：Web3 基础、合约实践、测试网 proof 和账户模型对比。
+- 014-016：AI x Web3 workflow、受限助手设计和可交互学习产物。
+- 017-020：行业观察、proof pack 和公开学习总结。

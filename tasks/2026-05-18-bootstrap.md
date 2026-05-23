@@ -1,25 +1,24 @@
-# Task: Bootstrap Learning Agent
+# 任务：启动 Learning Agent
 
-Date: 2026-05-18
+日期：2026-05-18
 
-## Objective
+## 目标
 
-Initialize the personal AI x Web3 School learning workspace, daily check-in flow, and Handbook feedback process.
+初始化个人 AI x Web3 School 学习工作区、每日打卡流程和 Handbook feedback 流程。
 
-## Done
+## 已完成
 
-- Created local learning repo structure.
-- Added profile draft.
-- Added first-week learning plan.
-- Added daily note and check-in draft.
-- Added GitHub setup notes.
-- Added WCB Agent API usage boundary.
-- Added Handbook feedback template.
+- 创建本地学习仓库结构。
+- 添加 profile 草稿。
+- 添加第一周学习计划。
+- 添加每日笔记和打卡草稿。
+- 添加 GitHub 设置说明。
+- 添加 WCB Agent API 使用边界。
+- 添加 Handbook feedback 模板。
 
-## Pending
+## 待完成
 
-- Confirm learner profile.
-- Confirm GitHub repo name, visibility, and remote creation.
-- Log in to WCB and refresh exact learner tasks.
-- Submit today's check-in manually or confirm a WCB API write.
-
+- 确认学员画像。
+- 确认 GitHub repo 名称、可见性和 remote 创建。
+- 登录 WCB 并刷新精确学员任务。
+- 手动提交今日打卡，或确认一次 WCB API 写入。

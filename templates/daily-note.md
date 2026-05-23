@@ -1,22 +1,21 @@
-# YYYY-MM-DD Daily Note
+# YYYY-MM-DD 每日笔记
 
-## Today
+## 今日内容
 
-## WCB Tasks
+## WCB 任务
 
-## Minimum Path
+## 最小路径
 
-## Recommended Path
+## 推荐路径
 
-## Challenge Path
+## 挑战路径
 
-## Notes
+## 笔记
 
-## Questions
+## 问题
 
-## Handbook Feedback Candidates
+## Handbook 反馈候选
 
-## Check-in Draft
+## 打卡草稿
 
-## Submission Record
-
+## 提交记录

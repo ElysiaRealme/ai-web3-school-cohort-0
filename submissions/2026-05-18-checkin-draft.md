@@ -1,4 +1,4 @@
-# 2026-05-18 Check-in Draft
+# 2026-05-18 打卡草稿
 
 今天完成了 AI x Web3 School Learning Agent 的初始化：
 

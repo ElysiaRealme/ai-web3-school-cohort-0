@@ -1,54 +1,60 @@
-# WCB Agent Flow
+# WCB Agent 工作流
 
-Source docs: https://web3career.build/llms.txt
+来源文档：https://web3career.build/llms.txt
 
-## API Boundary
+## API 边界
 
-- Base URL: `https://web3career.build`
-- Primary endpoint: `POST /api/agent/call`
-- Catalog endpoint: `GET /api/agent/catalog`
-- Secret variable name: `WCB_AGENT_SECRET_API_KEY`
+- Base URL：`https://web3career.build`
+- 主要 endpoint：`POST /api/agent/call`
+- Catalog endpoint：`GET /api/agent/catalog`
+- Secret 变量名：`WCB_AGENT_SECRET_API_KEY`
 
-Do not commit the real secret key. Keep it in a local environment variable, a local `.env.local` ignored by git, or the agent's secret storage.
+不要提交真实 secret key。它只能保存在本地环境变量、被 git 忽略的本地 `.env.local`，或 Agent 的 secret storage 中。
 
-## Useful Learner Procedures
+## 常用学员接口
 
-- `users.getProfile`: read current profile.
-- `users.getMyPermissions`: read current permissions.
-- `tasks.listForLearner`: read learner tasks.
-- `tasks.myTaskHistory`: read task history.
-- `tasks.submitEvidence`: submit task proof after learner confirmation.
-- `events.listForLearner`: read learner meetings.
-- `events.getCalendarPublic`: read public calendar.
+- `users.getProfile`：读取当前 profile。
+- `users.getMyPermissions`：读取当前权限。
+- `tasks.listForLearner`：读取学员任务。
+- `tasks.myTaskHistory`：读取任务历史。
+- `tasks.submitEvidence`：在学员确认后提交任务 proof。
+- `events.listForLearner`：读取学员会议。
+- `events.getCalendarPublic`：读取公开日历。
 
-## Write Safety Rule
+## 写入安全规则
 
-Before any write operation such as `tasks.submitEvidence`, show the exact content to be submitted and wait for learner confirmation.
+任何写入操作之前，例如 `tasks.submitEvidence`，都必须先展示将要提交的完整内容，并等待学员确认。
 
-## Daily Use
+## 每日使用流程
 
-1. Read WCB Learning page or API task list.
-2. Convert the current task into minimum / recommended / challenge paths.
-3. Draft the daily note and check-in.
-4. Learner manually submits on WCB or confirms API write.
-5. Record the final submission status or link in `daily/YYYY-MM-DD.md`.
-6. For learning-note changes, automatically commit and push the relevant public-safe files after status and sensitive-info checks.
+1. 读取 WCB Learning 页面或 API 任务列表。
+2. 将当前任务转换成最小路径、推荐路径和挑战路径。
+3. 起草每日笔记和打卡内容。
+4. 学员手动提交到 WCB，或明确确认 API 写入。
+5. 将最终提交状态或链接记录到 `daily/YYYY-MM-DD.md`。
+6. 对学习笔记变更执行状态检查和敏感信息扫描后，自动 commit 并 push 当前相关的公开安全文件。
 
-## GitHub Proof Rule
+## 笔记语言规则
 
-The learner authorized automatic commit and push for future learning workflow updates on 2026-05-23.
+- 默认使用中文记录学习笔记、任务说明、打卡草稿和 proof 说明。
+- 英文仅保留在必要术语、课程名、接口名、命令、路径、URL、commit message 和原始引用中。
+- 如果英文术语会影响理解，应在首次出现时给出中文解释。
 
-- Stage only files relevant to the current learning step.
-- Leave unrelated untracked files untouched.
-- Never commit `.env`, API keys, private keys, seed phrases, screenshots containing secrets, or private personal data.
-- Return the commit hash and GitHub proof links after pushing.
+## GitHub Proof 规则
 
-## 2026-05-18 Read-only Check
+学员已于 2026-05-23 授权未来学习工作流更新自动 commit 和 push。
 
-- `program.getById` with slug `AI-Web3-School` succeeded.
-- Program ID: `cmnx791nl008sru0167pzp4ki`.
-- Program status: running.
-- Program dates: 2026-05-18 to 2026-06-14.
-- Current key permissions: `USER`; no admin permissions.
-- `events.listForLearner` returned 2026-05-18 learner events.
-- `tasks.listForLearner` requires a concrete `trackId`; for event-related tasks, `tasks.listForLearnerByIds` worked with task IDs from learner events.
+- 只 stage 当前学习步骤相关文件。
+- 保持无关未跟踪文件不变。
+- 不提交 `.env`、API key、私钥、助记词、包含 secret 的截图或私人数据。
+- push 后返回 commit hash 和 GitHub proof 链接。
+
+## 2026-05-18 只读检查
+
+- 使用 slug `AI-Web3-School` 调用 `program.getById` 成功。
+- Program ID：`cmnx791nl008sru0167pzp4ki`。
+- Program 状态：running。
+- Program 日期：2026-05-18 至 2026-06-14。
+- 当前关键权限：`USER`，无 admin 权限。
+- `events.listForLearner` 返回了 2026-05-18 学员事件。
+- `tasks.listForLearner` 需要具体 `trackId`；对于事件相关任务，可以从 learner events 取 task IDs 后使用 `tasks.listForLearnerByIds`。

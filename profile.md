@@ -1,23 +1,23 @@
-# Learner Profile
+# 学员画像
 
-Status: confirmed on 2026-05-18.
+状态：2026-05-18 已确认。
 
-## Current Assumptions
+## 当前画像
 
-- AI foundation: basic.
-- Web3 foundation: beginner.
-- Programming ability: independent developer.
-- Target direction: Hackathon project.
-- Daily available time: 3 hours
-- Output language preference: Chinese by default.
+- AI 基础：有基础。
+- Web3 基础：新手。
+- 编程能力：能独立开发。
+- 目标方向：Hackathon 项目。
+- 每日可投入时间：3 小时。
+- 输出语言偏好：默认中文。
 
-## Learning Strategy
+## 学习策略
 
-- Use AI foundation and independent development ability to move quickly through agent workflow, tooling, and prototype tasks.
-- Treat Web3 basics as the current bottleneck: wallet, signatures, testnet transactions, contracts, gas, and permission boundaries should be practiced early.
-- Keep outputs Hackathon-oriented: every note should try to produce a reusable idea, workflow, risk checklist, demo component, or proof-of-work artifact.
-- Use Chinese as the default working language, with English terms preserved where they are standard in docs or code.
+- 利用 AI 基础和独立开发能力，快速推进 Agent workflow、工具链和原型任务。
+- 将 Web3 基础视为当前瓶颈：钱包、签名、测试网交易、合约、Gas 和权限边界应尽早实践。
+- 保持 Hackathon 导向：每条笔记都尽量产出可复用 idea、workflow、风险清单、demo 组件或 proof-of-work 材料。
+- 默认使用中文作为工作语言；文档或代码中的标准英文术语可保留。
 
-## Public Profile Safety
+## 公开画像安全
 
-Only include public-safe information here. Do not write private contact details, API keys, wallet addresses tied to private identity, seed phrases, or application-only information.
+这里只记录公开安全信息。不要写入私人联系方式、API key、与私人身份强绑定的钱包地址、助记词或仅限申请过程使用的信息。
