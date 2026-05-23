@@ -153,7 +153,7 @@ Proof:
 
 ### 007｜Learning Agent Setup：学习代理与 GitHub 工作区
 
-Status: next.
+Status: completed.
 
 WCB task coverage:
 
@@ -172,9 +172,15 @@ Output:
 - Agent-assisted learning log.
 - Commit / README proof.
 
+Proof:
+
+- `tasks/learning-agent-setup-proof.md`
+- `wcb-agent-flow.md`
+- `daily/2026-05-23.md`
+
 ### 008｜AI 基础概念卡片：从概念到可复习材料
 
-Status: pending.
+Status: next.
 
 WCB task coverage:
 

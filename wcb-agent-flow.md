@@ -32,6 +32,16 @@ Before any write operation such as `tasks.submitEvidence`, show the exact conten
 3. Draft the daily note and check-in.
 4. Learner manually submits on WCB or confirms API write.
 5. Record the final submission status or link in `daily/YYYY-MM-DD.md`.
+6. For learning-note changes, automatically commit and push the relevant public-safe files after status and sensitive-info checks.
+
+## GitHub Proof Rule
+
+The learner authorized automatic commit and push for future learning workflow updates on 2026-05-23.
+
+- Stage only files relevant to the current learning step.
+- Leave unrelated untracked files untouched.
+- Never commit `.env`, API keys, private keys, seed phrases, screenshots containing secrets, or private personal data.
+- Return the commit hash and GitHub proof links after pushing.
 
 ## 2026-05-18 Read-only Check
 
