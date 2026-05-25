@@ -266,7 +266,7 @@ Proof：
 
 ### 011｜测试网实践：完成一笔测试网交易
 
-状态：学习中。
+状态：已完成。
 
 WCB 任务覆盖：
 
@@ -289,9 +289,15 @@ WCB 任务覆盖：
 
 - `tasks/011-testnet-transaction-note.md`
 
+Proof：
+
+- `tasks/011-testnet-transaction-note.md`
+- `submissions/week1-testnet-transaction-proof.md`
+- Commit `9e6f25a`
+
 ### 012｜最小合约交互：一次读取、一次写入、一次验证
 
-状态：待进行。
+状态：学习中。
 
 WCB 任务覆盖：
 
@@ -307,6 +313,10 @@ WCB 任务覆盖：
 
 - 合约交互笔记。
 - 读 / 写结果和验证材料。
+
+学习材料：
+
+- `tasks/012-minimal-contract-interaction-note.md`
 
 ### 013｜EOA、智能账户、多签：权限模型对比
 
@@ -521,5 +531,5 @@ WCB 快照中已通过或已提交的 live 任务：
 继续推进：
 
 ```text
-011｜测试网实践：完成一笔测试网交易
+012｜最小合约交互：一次读取、一次写入、一次验证
 ```
