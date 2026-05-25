@@ -2,7 +2,7 @@
 
 日期：2026-05-25
 
-状态：学习中，先学习，暂未检查。
+状态：实践已完成，待检查题确认。
 
 ## 本节目标
 
@@ -186,4 +186,35 @@ Agent 不应该替你：
 - 公开 proof 应包含浏览器链接和关键字段。
 - 私钥、助记词、API Key 永远不能进入公开 repo。
 
-等你说“我学完了，可以考我”，我再出检查题。
+## 实践 proof
+
+学员已完成一笔 Sepolia 测试网交易，并提供区块浏览器截图。
+
+交易字段：
+
+- Network：Ethereum Sepolia Testnet
+- Transaction Hash：`0xc1381101c40bf651f88d9dd8f1c7e619d80243edad155aa987b07f35980398b0`
+- Explorer Link：https://sepolia.etherscan.io/tx/0xc1381101c40bf651f88d9dd8f1c7e619d80243edad155aa987b07f35980398b0
+- Status：Success
+- Block：`10914902`
+- From：`0x603969bF57B56e5ECa1f85FE761DB22B91857655`
+- To：`0x0ec2a5758EA4C65D78F405e5f8fF4F2D1AE253b2`
+- Value：`0.0233 SepoliaETH`
+- Transaction Fee：`0.000052299804858 ETH`
+- Gas Price：`2.490466898 Gwei`
+- Timestamp：`May-24-2026 10:40:48 PM +UTC`
+
+本次检查结论：
+
+- 使用的是 Sepolia Testnet，不是主网。
+- 区块浏览器显示 `Success`，不是只记录交易哈希。
+- 交易为普通 ETH 转账，截图未显示合约授权或复杂 calldata。
+- 公开笔记只记录公开链上字段，没有记录助记词、私钥、API Key 或钱包备份文件。
+
+公开 proof 草稿：
+
+- `submissions/week1-testnet-transaction-proof.md`
+
+## 下一步
+
+本节实践已经完成。接下来需要用检查题确认是否真正理解 011，再决定是否标记本节完成。
