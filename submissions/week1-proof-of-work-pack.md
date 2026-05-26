@@ -35,7 +35,7 @@ Week 1｜AI x Web3 综合任务｜提交 Week 1 Proof-of-Work Pack
 | 整理 Web3 基础概念卡片 | https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/submissions/week1-web3-concept-cards-wcb.md |
 | 完成一笔测试网交易 | https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/submissions/week1-testnet-transaction-proof.md |
 | 测试网交易 Etherscan | https://sepolia.etherscan.io/tx/0xc1381101c40bf651f88d9dd8f1c7e619d80243edad155aa987b07f35980398b0 |
-| 部署或调用一个最小智能合约 | https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/tasks/012-minimal-contract-interaction-note.md |
+| 部署或调用一个最小智能合约 | https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/submissions/week1-minimal-contract-proof.md |
 | 比较 EOA、智能账户、多签权限差异 | https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/tasks/013-account-permission-models-note.md |
 
 ### AI x Web3 综合任务

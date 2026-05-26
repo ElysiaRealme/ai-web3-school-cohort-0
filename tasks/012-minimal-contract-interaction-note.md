@@ -254,3 +254,24 @@ transfer(to, amount)：写
 
 - 012 已完成。
 - 下一节是 `013｜EOA、智能账户、多签：权限模型对比`。
+
+## 实操补充：Remix 最小合约
+
+日期：2026-05-27
+
+学员指出 Week 1 仍需完成：
+
+```text
+在测试网上部署或调用一个最小智能合约。
+```
+
+已补充实操材料：
+
+- 合约：`experiments/simple-store/SimpleStore.sol`
+- 指南：`tasks/remix-simple-store-practice-guide.md`
+- Proof 模板：`submissions/week1-minimal-contract-proof.md`
+
+当前状态：
+
+- 等待学员使用 Remix 在 Sepolia 完成部署或调用。
+- 完成后需要回填 Contract Address、Deployment Tx Hash、setValue Tx Hash 和读取结果。
