@@ -410,7 +410,7 @@ WCB 任务覆盖：
 
 ### 016｜AI 可交互学习产物：页面、CLI、流程图、Quiz 或概念卡片
 
-状态：待进行。
+状态：学习中。
 
 WCB 任务覆盖：
 
@@ -425,6 +425,10 @@ WCB 任务覆盖：
 
 - `experiments/` 或 `demos/` 下的学习产物。
 - README 或 daily note 记录过程。
+
+学习材料：
+
+- `tasks/016-ai-interactive-learning-artifact-note.md`
 
 ### 017｜行业信息流关注清单
 
