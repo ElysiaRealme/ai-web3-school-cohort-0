@@ -527,7 +527,7 @@ WCB 任务覆盖：
 
 ### 020｜发布 AI x Web3 学习总结
 
-状态：学习中。
+状态：已完成。
 
 WCB 任务覆盖：
 
@@ -547,13 +547,18 @@ WCB 任务覆盖：
 
 - `submissions/week1-learning-summary.md`
 
+完成说明：
+
+- 已生成 Week 1 学习总结草稿。
+- 总结包含学到什么、构建了什么、仍然不清楚什么和下周方向。
+
 ### 021｜Hackathon Idea Seed：把 Week 1 知识收束成项目方向
 
-状态：待进行。
+状态：延后到 Week 3/4。
 
 WCB 任务覆盖：
 
-- Hackathon 准备。
+- Hackathon 准备，当前不作为 Week 1 主线继续推进。
 
 目标：
 
@@ -563,6 +568,10 @@ WCB 任务覆盖：
 产出：
 
 - `hackathon/` 下的一个 idea seed。
+
+延后记录：
+
+- `tasks/future-week3-4-backlog.md`
 
 ## WCB 操作路线
 
@@ -616,8 +625,8 @@ WCB 快照中已通过或已提交的 live 任务：
 
 ## 下一步
 
-继续推进：
+Week 1 主线 00X 已完成到 020；021 按学员要求延后到 Week 3/4：
 
 ```text
-020｜发布 AI x Web3 学习总结
+021｜Hackathon Idea Seed：把 Week 1 知识收束成项目方向
 ```
