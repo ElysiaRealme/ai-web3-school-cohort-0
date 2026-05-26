@@ -352,7 +352,7 @@ WCB 任务覆盖：
 
 ### 014｜AI x Web3 最小交叉流程图
 
-状态：学习中。
+状态：已完成。
 
 WCB 任务覆盖：
 
@@ -371,6 +371,15 @@ WCB 任务覆盖：
 学习材料：
 
 - `tasks/014-ai-web3-minimal-flow-note.md`
+
+Proof：
+
+- `submissions/week1-ai-web3-minimal-flow-proof.md`
+
+完成说明：
+
+- 学员说明 Codex 当前不方便画图，本节直接视为通过。
+- 已保留 Mermaid 流程图和可提交 proof 草稿。
 
 ### 015｜受限 Web3 助手或小 workflow 设计
 
@@ -549,5 +558,5 @@ WCB 快照中已通过或已提交的 live 任务：
 继续推进：
 
 ```text
-014｜AI x Web3 最小交叉流程图
+015｜受限 Web3 助手或小 workflow 设计
 ```

@@ -2,7 +2,7 @@
 
 日期：2026-05-27
 
-状态：学习中。
+状态：已完成。
 
 ## 本节目标
 
@@ -197,5 +197,11 @@ flowchart TD
 
 ## 当前状态
 
-- 014 已进入学习中。
-- 先学习最小流程图，再做检查题或整理可提交 proof。
+- 014 已完成。
+- 学员说明 Codex 当前不方便画图，因此本节直接视为通过。
+- 已保留 Mermaid 流程图草稿，可用于后续 WCB proof。
+- 下一节是 `015｜受限 Web3 助手或小 workflow 设计`。
+
+## 可提交 proof
+
+- `submissions/week1-ai-web3-minimal-flow-proof.md`
