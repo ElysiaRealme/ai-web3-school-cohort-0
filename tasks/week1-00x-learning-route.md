@@ -447,7 +447,7 @@ Proof：
 
 ### 017｜行业信息流关注清单
 
-状态：待进行。
+状态：学习中。
 
 WCB 任务覆盖：
 
@@ -461,6 +461,11 @@ WCB 任务覆盖：
 产出：
 
 - `tasks/industry-follow-list.md` 或等价文件。
+
+学习材料：
+
+- `tasks/017-industry-info-flow-note.md`
+- `tasks/industry-follow-list.md`
 
 ### 018｜拆解 1-2 个 AI x Web3 项目或个人
 
