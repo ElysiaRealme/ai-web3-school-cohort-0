@@ -474,7 +474,7 @@ WCB 任务覆盖：
 
 ### 018｜拆解 1-2 个 AI x Web3 项目或个人
 
-状态：学习中。
+状态：已完成。
 
 WCB 任务覆盖：
 
@@ -494,9 +494,14 @@ WCB 任务覆盖：
 - `tasks/018-industry-observation-note.md`
 - `tasks/industry-observation.md`
 
+完成说明：
+
+- 已拆解 `Coinbase AgentKit` 与 `Vitalik / Ethereum Account Abstraction`。
+- 已形成行业观察笔记。
+
 ### 019｜Week 1 Proof-of-Work Pack
 
-状态：待进行。
+状态：学习中。
 
 WCB 任务覆盖：
 
@@ -508,6 +513,10 @@ WCB 任务覆盖：
 - 包含 repo 链接、commit 链接、daily notes、任务 proof、截图或公开链接、测试网 proof、合约 proof 和 Learning Agent 笔记。
 
 产出：
+
+- `submissions/week1-proof-of-work-pack.md`
+
+学习材料：
 
 - `submissions/week1-proof-of-work-pack.md`
 
@@ -601,5 +610,5 @@ WCB 快照中已通过或已提交的 live 任务：
 继续推进：
 
 ```text
-018｜拆解 1-2 个 AI x Web3 项目或个人
+019｜Week 1 Proof-of-Work Pack
 ```
