@@ -447,7 +447,7 @@ Proof：
 
 ### 017｜行业信息流关注清单
 
-状态：学习中。
+状态：已完成。
 
 WCB 任务覆盖：
 
@@ -467,9 +467,14 @@ WCB 任务覆盖：
 - `tasks/017-industry-info-flow-note.md`
 - `tasks/industry-follow-list.md`
 
+完成说明：
+
+- 已建立 AI x Web3 行业信息流关注清单。
+- 清单覆盖人物、项目、研究组织、newsletter、X 账号、repo / docs 和社区。
+
 ### 018｜拆解 1-2 个 AI x Web3 项目或个人
 
-状态：待进行。
+状态：学习中。
 
 WCB 任务覆盖：
 
@@ -483,6 +488,11 @@ WCB 任务覆盖：
 产出：
 
 - `tasks/industry-observation.md` 或等价文件。
+
+学习材料：
+
+- `tasks/018-industry-observation-note.md`
+- `tasks/industry-observation.md`
 
 ### 019｜Week 1 Proof-of-Work Pack
 
@@ -591,5 +601,5 @@ WCB 快照中已通过或已提交的 live 任务：
 继续推进：
 
 ```text
-017｜行业信息流关注清单
+018｜拆解 1-2 个 AI x Web3 项目或个人
 ```
