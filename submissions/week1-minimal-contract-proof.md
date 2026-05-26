@@ -2,7 +2,7 @@
 
 日期：2026-05-27
 
-状态：待填写链上结果。
+状态：已完成。
 
 ## 任务目标
 
@@ -26,27 +26,49 @@
 
 - `tasks/remix-simple-store-practice-guide.md`
 
-## 待填写 Proof
+## Proof
 
-完成链上操作后填写：
-
-```markdown
 - Network：Sepolia Testnet
 - Tool：Remix
 - Contract Name：SimpleStore
-- Contract Address：
-- Contract Explorer Link：
-- Deployment Tx Hash：
-- Deployment Tx Link：
-- Deployment Status：
-- Read Function：value()
-- Read Result Before：
-- Write Function：setValue(uint256)
-- Write Args：
-- Write Tx Hash：
-- Write Tx Link：
-- Write Status：
-- Read Result After：
+- Contract Address：`0x851E76b6CA22d8DB49C3FB48c66548EF102B372B`
+- Contract Explorer Link：https://sepolia.etherscan.io/address/0x851E76b6CA22d8DB49C3FB48c66548EF102B372B
+- Deployment Tx Hash：`0xcd0fd9d7fa9071e5e0fd506b127d077ecd9ef6e943265666893835bc943745d2`
+- Deployment Tx Link：https://sepolia.etherscan.io/tx/0xcd0fd9d7fa9071e5e0fd506b127d077ecd9ef6e943265666893835bc943745d2
+- Deployment Status：Success，已生成合约地址并可在 Sepolia Etherscan 查看。
+- Read Function：`value()`
+- Read Result Before：`42`
+- Write Function：`setValue(uint256)`
+- Write Args：`123`
+- Write Tx Hash：`0x35f9e1c41a56d1968b9fb7403b0f07bdac8a6a495bd3dd227c5657a8a263494b`
+- Write Tx Link：https://sepolia.etherscan.io/tx/0x35f9e1c41a56d1968b9fb7403b0f07bdac8a6a495bd3dd227c5657a8a263494b
+- Write Status：Remix 回读 `value()` 已返回 `123`，说明写入后状态符合预期。
+- Read Result After：`123`
+
+## 读取记录
+
+### 部署后读取
+
+```text
+call
+from: 0x603969bF57B56e5ECa1f85FE761DB22B91857655
+to: SimpleStore.value() 0x851E76b6CA22d8DB49C3FB48c66548EF102B372B
+decoded output:
+{
+  "0": "uint256: 42"
+}
+```
+
+### 写入后读取
+
+```text
+call
+from: 0x603969bF57B56e5ECa1f85FE761DB22B91857655
+to: SimpleStore.value() 0x851E76b6CA22d8DB49C3FB48c66548EF102B372B
+decoded output:
+{
+  "0": "uint256: 123"
+}
 ```
 
 ## 人工检查记录
@@ -77,11 +99,22 @@
 
 ## 当前状态
 
-等待用户提供：
+- 已完成最小合约部署。
+- 已在 Sepolia Etherscan 上形成合约地址 proof。
+- 已完成读取函数 `value()`，读取结果从 `42` 更新到 `123`。
+- 已记录写入函数 `setValue(123)` 的交易哈希。
 
-```markdown
-- Contract Address：
-- Deployment Tx Hash：
-- setValue Tx Hash：
-- Read Result After：
-```
+## WCB 提交建议
+
+本任务要求“部署一个最小合约，并在区块浏览器中查看合约地址”或“调用测试网合约读取 / 写入函数”至少一种。
+
+当前 proof 已包含：
+
+- 合约地址。
+- 部署交易。
+- 区块浏览器链接。
+- 读取函数结果。
+- 写入交易。
+- 写入后回读结果。
+
+可直接提交本文件链接。

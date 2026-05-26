@@ -273,5 +273,10 @@ transfer(to, amount)：写
 
 当前状态：
 
-- 等待学员使用 Remix 在 Sepolia 完成部署或调用。
-- 完成后需要回填 Contract Address、Deployment Tx Hash、setValue Tx Hash 和读取结果。
+- 已使用 Remix 在 Sepolia 完成 SimpleStore 部署。
+- Contract Address：`0x851E76b6CA22d8DB49C3FB48c66548EF102B372B`
+- Deployment Tx Hash：`0xcd0fd9d7fa9071e5e0fd506b127d077ecd9ef6e943265666893835bc943745d2`
+- `value()` 初始读取结果：`42`
+- `setValue(123)` Tx Hash：`0x35f9e1c41a56d1968b9fb7403b0f07bdac8a6a495bd3dd227c5657a8a263494b`
+- `setValue(123)` 后回读结果：`123`
+- WCB proof：`submissions/week1-minimal-contract-proof.md`
