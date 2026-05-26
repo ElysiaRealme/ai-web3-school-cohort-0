@@ -2,7 +2,7 @@
 
 日期：2026-05-27
 
-状态：学习中。
+状态：已完成。
 
 ## 本节目标
 
@@ -194,5 +194,8 @@ WCB 任务通常会关注 AI 参与和人工复核。
 
 ## 当前状态
 
-- 016 已进入学习中。
-- 先理解如何定义最小可交互产物，再选择具体实现形式。
+- 016 已完成。
+- 已实现 `测试网交易 Proof 检查器`。
+- 产物文件：`experiments/testnet-proof-checker.html`
+- 提交说明：`submissions/week1-ai-interactive-artifact-proof.md`
+- 下一节是 `017｜行业信息流关注清单`。

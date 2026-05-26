@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>测试网交易 Proof 检查器</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8f5;
+      --surface: #ffffff;
+      --ink: #1d2522;
+      --muted: #64706b;
+      --line: #d9dfd8;
+      --accent: #167f6d;
+      --accent-dark: #0e5c4e;
+      --warn: #a65f00;
+      --danger: #b3261e;
+      --ok: #116b3f;
+      --soft-ok: #e8f5ee;
+      --soft-warn: #fff4de;
+      --soft-danger: #fdeceb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    button {
+      min-height: 40px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      background: var(--accent);
+      color: #ffffff;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 650;
+      padding: 8px 14px;
+    }
+
+    button.secondary {
+      background: transparent;
+      color: var(--accent-dark);
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid rgba(22, 127, 109, 0.22);
+      outline-offset: 2px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      font-weight: 650;
+      color: var(--ink);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      font: inherit;
+      padding: 9px 10px;
+      background: #fbfcfa;
+    }
+
+    textarea {
+      min-height: 92px;
+      resize: vertical;
+    }
+
+    .wide {
+      grid-column: 1 / -1;
+    }
+
+    .checks {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .check-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px;
+      background: #fbfcfa;
+    }
+
+    .check-row input {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      flex: 0 0 auto;
+    }
+
+    .check-row span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .status {
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 14px;
+      border: 1px solid var(--line);
+      background: #fbfcfa;
+    }
+
+    .status.ok {
+      border-color: #96d0b1;
+      background: var(--soft-ok);
+      color: var(--ok);
+    }
+
+    .status.warn {
+      border-color: #e3bf75;
+      background: var(--soft-warn);
+      color: var(--warn);
+    }
+
+    .status.danger {
+      border-color: #efaaa6;
+      background: var(--soft-danger);
+      color: var(--danger);
+    }
+
+    .result-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .result-list li {
+      border-bottom: 1px solid var(--line);
+      padding: 8px 0;
+      color: var(--muted);
+    }
+
+    .result-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .proof-output {
+      margin-top: 14px;
+    }
+
+    .proof-output textarea {
+      min-height: 260px;
+      font-family: Consolas, "SFMono-Regular", monospace;
+      font-size: 13px;
+    }
+
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      main {
+        width: min(100% - 20px, 720px);
+        padding-top: 18px;
+      }
+
+      .layout,
+      .fields {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>测试网交易 Proof 检查器</h1>
+        <p>检查一份测试网交易 proof 是否包含可公开提交的关键字段，并拦截敏感信息。</p>
+      </div>
+      <div class="actions">
+        <button type="button" id="loadSample">载入 Sepolia 示例</button>
+        <button type="button" class="secondary" id="resetForm">清空</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <section aria-labelledby="inputTitle">
+        <h2 id="inputTitle">Proof 字段</h2>
+        <div class="fields">
+          <label>
+            Network
+            <input id="network" placeholder="例如：Ethereum Sepolia Testnet" />
+          </label>
+          <label>
+            Status
+            <input id="status" placeholder="例如：Success" />
+          </label>
+          <label class="wide">
+            Transaction Hash
+            <input id="txHash" placeholder="0x..." />
+          </label>
+          <label class="wide">
+            Explorer Link
+            <input id="explorer" placeholder="https://sepolia.etherscan.io/tx/0x..." />
+          </label>
+          <label>
+            From
+            <input id="from" placeholder="0x..." />
+          </label>
+          <label>
+            To
+            <input id="to" placeholder="0x..." />
+          </label>
+          <label>
+            Value
+            <input id="value" placeholder="例如：0.0233 SepoliaETH" />
+          </label>
+          <label>
+            Gas Fee
+            <input id="gasFee" placeholder="例如：0.000052299804858 ETH" />
+          </label>
+          <label>
+            Block
+            <input id="block" placeholder="例如：10914902" />
+          </label>
+          <label>
+            操作类型
+            <input id="actionType" placeholder="例如：普通测试网转账" />
+          </label>
+          <label class="wide">
+            公开说明
+            <textarea id="reflection" placeholder="写下你检查过什么、学到了什么。"></textarea>
+          </label>
+        </div>
+
+        <div class="checks" aria-label="安全检查项">
+          <label class="check-row">
+            <input type="checkbox" id="noSecrets" />
+            <strong>没有包含助记词、私钥、API Key 或钱包备份文件<span>公开 repo 中不能出现任何 secret。</span></strong>
+          </label>
+          <label class="check-row">
+            <input type="checkbox" id="testnetOnly" />
+            <strong>确认这是测试网交易<span>网络和区块浏览器必须与测试网一致。</span></strong>
+          </label>
+          <label class="check-row">
+            <input type="checkbox" id="manualCheck" />
+            <strong>已人工检查地址、金额、状态和 Gas<span>工具只做字段检查，不能替代人工复核。</span></strong>
+          </label>
+        </div>
+      </section>
+
+      <section aria-labelledby="resultTitle">
+        <h2 id="resultTitle">检查结果</h2>
+        <div id="statusBox" class="status warn">请填写字段并点击检查。</div>
+        <ul id="resultList" class="result-list"></ul>
+        <div class="actions proof-output">
+          <button type="button" id="checkProof">检查 Proof</button>
+          <button type="button" class="secondary" id="copyProof">复制 Markdown</button>
+        </div>
+        <div class="proof-output">
+          <label>
+            Markdown 草稿
+            <textarea id="proofMarkdown" readonly></textarea>
+          </label>
+        </div>
+        <p class="note">本工具不连接钱包、不发送交易、不保存任何输入；它只在浏览器本地检查字段完整性。</p>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const fields = {
+      network: document.getElementById("network"),
+      status: document.getElementById("status"),
+      txHash: document.getElementById("txHash"),
+      explorer: document.getElementById("explorer"),
+      from: document.getElementById("from"),
+      to: document.getElementById("to"),
+      value: document.getElementById("value"),
+      gasFee: document.getElementById("gasFee"),
+      block: document.getElementById("block"),
+      actionType: document.getElementById("actionType"),
+      reflection: document.getElementById("reflection"),
+      noSecrets: document.getElementById("noSecrets"),
+      testnetOnly: document.getElementById("testnetOnly"),
+      manualCheck: document.getElementById("manualCheck")
+    };
+
+    const statusBox = document.getElementById("statusBox");
+    const resultList = document.getElementById("resultList");
+    const proofMarkdown = document.getElementById("proofMarkdown");
+
+    const sample = {
+      network: "Ethereum Sepolia Testnet",
+      status: "Success",
+      txHash: "0xc1381101c40bf651f88d9dd8f1c7e619d80243edad155aa987b07f35980398b0",
+      explorer: "https://sepolia.etherscan.io/tx/0xc1381101c40bf651f88d9dd8f1c7e619d80243edad155aa987b07f35980398b0",
+      from: "0x603969bF57B56e5ECa1f85FE761DB22B91857655",
+      to: "0x0ec2a5758EA4C65D78F405e5f8fF4F2D1AE253b2",
+      value: "0.0233 SepoliaETH",
+      gasFee: "0.000052299804858 ETH",
+      block: "10914902",
+      actionType: "普通测试网转账",
+      reflection: "我检查了 Network、Transaction Hash、Explorer Link、Status、From、To、Value、Gas Fee 和 Block，并确认没有公开助记词、私钥或 API Key。"
+    };
+
+    function readValue(name) {
+      return fields[name].value.trim();
+    }
+
+    function hasValue(name) {
+      return readValue(name).length > 0;
+    }
+
+    function looksLikeHash(value) {
+      return /^0x[a-fA-F0-9]{64}$/.test(value);
+    }
+
+    function looksLikeAddress(value) {
+      return /^0x[a-fA-F0-9]{40}$/.test(value);
+    }
+
+    function hasSensitiveText() {
+      const joined = Object.keys(fields)
+        .filter((key) => fields[key].type !== "checkbox")
+        .map((key) => readValue(key).toLowerCase())
+        .join("\n");
+      return [
+        "seed phrase",
+        "mnemonic",
+        "private key",
+        "api key",
+        "w3cb",
+        "助记词",
+        "私钥",
+        "密钥"
+      ].some((keyword) => joined.includes(keyword));
+    }
+
+    function buildMarkdown() {
+      return `## 测试网交易 Proof
+
+- Network：${readValue("network")}
+- Transaction Hash：${readValue("txHash")}
+- Explorer Link：${readValue("explorer")}
+- Status：${readValue("status")}
+- From：${readValue("from")}
+- To：${readValue("to")}
+- Value：${readValue("value")}
+- Gas Fee：${readValue("gasFee")}
+- Block：${readValue("block")}
+- 操作类型：${readValue("actionType")}
+
+## 我检查过的内容
+
+- 已确认这是测试网交易：${fields.testnetOnly.checked ? "是" : "否"}
+- 已人工检查地址、金额、状态和 Gas：${fields.manualCheck.checked ? "是" : "否"}
+- 已确认没有公开助记词、私钥、API Key 或钱包备份文件：${fields.noSecrets.checked ? "是" : "否"}
+
+## 学习复盘
+
+${readValue("reflection")}`;
+    }
+
+    function setStatus(kind, message) {
+      statusBox.className = `status ${kind}`;
+      statusBox.textContent = message;
+    }
+
+    function renderResults(items) {
+      resultList.innerHTML = "";
+      items.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        resultList.appendChild(li);
+      });
+      proofMarkdown.value = buildMarkdown();
+    }
+
+    function checkProof() {
+      const issues = [];
+      const warnings = [];
+
+      [
+        ["network", "缺少 Network"],
+        ["status", "缺少 Status"],
+        ["txHash", "缺少 Transaction Hash"],
+        ["explorer", "缺少 Explorer Link"],
+        ["from", "缺少 From"],
+        ["to", "缺少 To"],
+        ["value", "缺少 Value"],
+        ["gasFee", "缺少 Gas Fee"],
+        ["block", "缺少 Block"]
+      ].forEach(([name, message]) => {
+        if (!hasValue(name)) issues.push(message);
+      });
+
+      if (hasValue("txHash") && !looksLikeHash(readValue("txHash"))) {
+        issues.push("Transaction Hash 格式不像 0x + 64 位十六进制");
+      }
+
+      if (hasValue("from") && !looksLikeAddress(readValue("from"))) {
+        issues.push("From 地址格式不像 0x + 40 位十六进制");
+      }
+
+      if (hasValue("to") && !looksLikeAddress(readValue("to"))) {
+        issues.push("To 地址格式不像 0x + 40 位十六进制");
+      }
+
+      if (hasValue("status") && readValue("status").toLowerCase() !== "success") {
+        issues.push("Status 不是 Success，不能作为成功交易 proof");
+      }
+
+      if (!fields.noSecrets.checked || hasSensitiveText()) {
+        issues.push("需要确认并移除助记词、私钥、API Key 或钱包备份文件");
+      }
+
+      if (!fields.testnetOnly.checked) {
+        issues.push("需要确认这是测试网交易");
+      }
+
+      if (!fields.manualCheck.checked) {
+        warnings.push("建议人工复核地址、金额、状态和 Gas 后再提交");
+      }
+
+      const explorer = readValue("explorer").toLowerCase();
+      const network = readValue("network").toLowerCase();
+      if (explorer && network.includes("sepolia") && !explorer.includes("sepolia")) {
+        warnings.push("Network 写了 Sepolia，但 Explorer Link 看起来不是 Sepolia 浏览器");
+      }
+
+      if (issues.length === 0 && warnings.length === 0) {
+        setStatus("ok", "检查通过：这份 proof 草稿可以公开提交。");
+        renderResults(["字段完整", "状态为 Success", "已确认测试网", "未发现敏感信息关键词"]);
+        return;
+      }
+
+      if (issues.length === 0) {
+        setStatus("warn", "基本可用，但建议补充人工复核。");
+        renderResults(warnings);
+        return;
+      }
+
+      setStatus("danger", "暂不建议提交：请先修正缺失或风险项。");
+      renderResults(issues.concat(warnings));
+    }
+
+    document.getElementById("checkProof").addEventListener("click", checkProof);
+
+    document.getElementById("loadSample").addEventListener("click", () => {
+      Object.keys(sample).forEach((key) => {
+        fields[key].value = sample[key];
+      });
+      fields.noSecrets.checked = true;
+      fields.testnetOnly.checked = true;
+      fields.manualCheck.checked = true;
+      checkProof();
+    });
+
+    document.getElementById("resetForm").addEventListener("click", () => {
+      Object.values(fields).forEach((field) => {
+        if (field.type === "checkbox") {
+          field.checked = false;
+        } else {
+          field.value = "";
+        }
+      });
+      proofMarkdown.value = "";
+      renderResults([]);
+      setStatus("warn", "请填写字段并点击检查。");
+    });
+
+    document.getElementById("copyProof").addEventListener("click", async () => {
+      proofMarkdown.value = buildMarkdown();
+      try {
+        await navigator.clipboard.writeText(proofMarkdown.value);
+        setStatus("ok", "Markdown 草稿已复制。");
+      } catch (error) {
+        setStatus("warn", "浏览器未允许复制，请手动选择 Markdown 草稿。");
+      }
+    });
+
+    proofMarkdown.value = buildMarkdown();
+  </script>
+</body>
+</html>

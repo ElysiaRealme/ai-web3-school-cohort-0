@@ -410,7 +410,7 @@ WCB 任务覆盖：
 
 ### 016｜AI 可交互学习产物：页面、CLI、流程图、Quiz 或概念卡片
 
-状态：学习中。
+状态：已完成。
 
 WCB 任务覆盖：
 
@@ -429,6 +429,16 @@ WCB 任务覆盖：
 学习材料：
 
 - `tasks/016-ai-interactive-learning-artifact-note.md`
+
+Proof：
+
+- `experiments/testnet-proof-checker.html`
+- `submissions/week1-ai-interactive-artifact-proof.md`
+
+完成说明：
+
+- 已实现静态 HTML 交互工具：测试网交易 Proof 检查器。
+- 工具只做本地字段检查，不连接钱包、不签名、不提交 WCB。
 
 ### 017｜行业信息流关注清单
 
@@ -571,5 +581,5 @@ WCB 快照中已通过或已提交的 live 任务：
 继续推进：
 
 ```text
-016｜AI 可交互学习产物：页面、CLI、流程图、Quiz 或概念卡片
+017｜行业信息流关注清单
 ```
