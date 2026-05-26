@@ -383,7 +383,7 @@ Proof：
 
 ### 015｜受限 Web3 助手或小 workflow 设计
 
-状态：待进行。
+状态：学习中。
 
 WCB 任务覆盖：
 
@@ -398,6 +398,10 @@ WCB 任务覆盖：
 
 - 小型 workflow 规格说明。
 - 允许动作 / 禁止动作 / 人工确认点。
+
+学习材料：
+
+- `tasks/015-limited-web3-assistant-workflow-note.md`
 
 ### 016｜AI 可交互学习产物：页面、CLI、流程图、Quiz 或概念卡片
 
