@@ -325,7 +325,7 @@ WCB 任务覆盖：
 
 ### 013｜EOA、智能账户、多签：权限模型对比
 
-状态：待进行。
+状态：学习中。
 
 WCB 任务覆盖：
 
@@ -340,6 +340,10 @@ WCB 任务覆盖：
 
 - 权限模型对比表。
 - Agent Wallet 设计启发。
+
+学习材料：
+
+- `tasks/013-account-permission-models-note.md`
 
 ### 014｜AI x Web3 最小交叉流程图
 
