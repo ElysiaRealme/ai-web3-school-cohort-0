@@ -143,3 +143,109 @@ Agent 不应该：
 - 012 已进入学习中。
 - 先学习最小合约读写闭环。
 - 学完后再进行检查题或实践。
+
+## 检查题回答记录
+
+日期：2026-05-26
+
+状态：1-6 题通过，第 7 题待补充。
+
+### 1. 读取函数和写入函数的核心区别
+
+学员回答：
+
+- `value()` 读取不会改变链上数据，不用产生 Gas 费交互。
+
+评价：
+
+- 通过。
+- 更精确地说，读取通常是本地或 RPC `call`，不产生链上状态变更，也不会生成交易哈希；写入会产生 transaction，需要钱包确认和 Gas。
+
+### 2. ABI 解决什么问题
+
+学员回答：
+
+- 用于解读 `data`，把十六进制翻译成合约函数调用。
+
+评价：
+
+- 通过。
+- ABI 也会说明函数名、参数类型、返回值、事件，以及哪些函数通常用于读取或写入。
+
+### 3. 写入前钱包确认页面至少检查哪些字段
+
+学员回答：
+
+- Network
+- Contract Address
+- Function
+- Args
+- Value
+
+评价：
+
+- 通过。
+- 这五个字段是最小检查项；实际操作中还应继续看 Gas、Data、权限影响，以及是否涉及 `approve`、`transfer`、owner/admin 变更。
+
+### 4. 为什么 `Status: Success` 后还要回读状态
+
+学员回答：
+
+- 要再次读取状态，验证结果真的变了。
+
+评价：
+
+- 通过。
+- 交易成功说明函数执行成功，但不代表参数一定符合预期；回读状态用于验证“结果符合预期”。
+
+### 5. 最小合约交互 proof 字段
+
+学员回答：
+
+```markdown
+## 最小合约交互 proof
+
+- Network：
+- Contract Address：
+- Read Function：
+- Read Result Before：
+- Write Function：
+- Write Args：
+- Transaction Hash：
+- Explorer Link：
+- Status：
+- Read Result After：
+- 我检查过的内容：
+```
+
+评价：
+
+- 通过。
+- 如果用于 WCB 提交，可以再补充 `本次学到的内容` 和 `仍然不确定的问题`，方便复盘。
+
+### 6. 判断读写类型
+
+学员回答：
+
+```text
+owner()：读
+balanceOf(address)：读
+setValue(123)：写
+approve(spender, amount)：写
+transfer(to, amount)：写
+```
+
+评价：
+
+- 通过。
+- `approve` 和 `transfer` 都是高风险写入，尤其 `approve` 要额外检查 spender、Token、额度和是否无限授权。
+
+### 7. Agent 与人工确认边界
+
+状态：
+
+- 待学员补充回答。
+
+提示：
+
+- 可以从“Agent 可以解释、草拟、检查、整理 proof”与“用户必须亲自确认钱包、签名、授权、部署或写入”两个方向回答。
