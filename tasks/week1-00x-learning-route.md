@@ -501,7 +501,7 @@ WCB 任务覆盖：
 
 ### 019｜Week 1 Proof-of-Work Pack
 
-状态：学习中。
+状态：已完成。
 
 WCB 任务覆盖：
 
@@ -520,9 +520,14 @@ WCB 任务覆盖：
 
 - `submissions/week1-proof-of-work-pack.md`
 
+完成说明：
+
+- 已生成 Week 1 Proof-of-Work Pack。
+- 已汇总 repo、daily notes、任务 proof、测试网 proof、交互产物、workflow 和行业观察链接。
+
 ### 020｜发布 AI x Web3 学习总结
 
-状态：待进行。
+状态：学习中。
 
 WCB 任务覆盖：
 
@@ -537,6 +542,10 @@ WCB 任务覆盖：
 
 - `submissions/week1-learning-summary.md`
 - 可选公开帖子草稿。
+
+学习材料：
+
+- `submissions/week1-learning-summary.md`
 
 ### 021｜Hackathon Idea Seed：把 Week 1 知识收束成项目方向
 
@@ -610,5 +619,5 @@ WCB 快照中已通过或已提交的 live 任务：
 继续推进：
 
 ```text
-019｜Week 1 Proof-of-Work Pack
+020｜发布 AI x Web3 学习总结
 ```
