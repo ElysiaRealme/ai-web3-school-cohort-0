@@ -403,10 +403,15 @@ WCB 任务覆盖：
 
 - `tasks/015-limited-web3-assistant-workflow-note.md`
 
+Proof：
+
+- `submissions/week1-limited-web3-assistant-workflow.md`
+
 完成说明：
 
 - 学员完成 015 检查题。
 - 已能区分允许动作、禁止动作、停止条件和最小 workflow 主题。
+- 已整理可提交 proof，覆盖问题、输入输出、人工确认点、风险限制和验证方式。
 
 ### 016｜AI 可交互学习产物：页面、CLI、流程图、Quiz 或概念卡片
 
