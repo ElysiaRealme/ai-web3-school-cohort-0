@@ -352,7 +352,7 @@ WCB 任务覆盖：
 
 ### 014｜AI x Web3 最小交叉流程图
 
-状态：待进行。
+状态：学习中。
 
 WCB 任务覆盖：
 
@@ -367,6 +367,10 @@ WCB 任务覆盖：
 
 - 流程图或 Mermaid 图。
 - 风险边界说明。
+
+学习材料：
+
+- `tasks/014-ai-web3-minimal-flow-note.md`
 
 ### 015｜受限 Web3 助手或小 workflow 设计
 
